@@ -73,8 +73,9 @@ select {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-
+    font-family: 'Roboto', sans-serif; 
+ position: relative;
+	background: #fff;
     &.welcome {
         background: url(../images/Welcome.jpg) center center no-repeat;
         background-size: cover;
@@ -86,10 +87,11 @@ $font-color: #554b43;
 footer {
     overflow: hidden;
     height: auto;
+	position: relative;
     width: 100%;
     padding: 15px 0;
     background: rgba(0,0,0,.65);
-
+ 
     .menu-footer {
         overflow: hidden;
         height: 100%;
