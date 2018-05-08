@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr, th, td, select, option {
+    border: 0;
+    vertical-align: baseline;
+    float: none;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+:focus {
+    outline: 0 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-weight: normal;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+select {
+    option {
+        font-weight: 300;
+    }
+}
+
+@mixin transition($transition) {
+    -webkit-transition: all $transition ease-in-out;
+    -moz-transition: $transition ease-in-out;
+    transition: all $transition ease-in-out;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    position: absolute;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ee542e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #888;
+}
+
+::-webkit-input-placeholder {
+    font-weight: 300;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    &.welcome {
+        background: url(../images/Welcome.jpg) center center no-repeat;
+        background-size: cover;
+    }
+}
+
+$font-color: #554b43;
+
+footer {
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0,0,0,.65);
+
+    .menu-footer {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        display: flex;
+
+        ul {
+            list-style: none;
+            display:flex;
+            height:100%;
+                align-items: center;
+            li {
+                display: inline-flex;
+
+                a {
+                    display: flex;
+                    color: #fff;
+                    height:100%;
+                    font-size: 18px;
+                    font-weight: 300;
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    @include transition(.25s);
+                    &:hover{
+                        color:$main-color;
+                        @include transition(.25s);
+                    }
+                }
+            }
+        }
+    }
+
+    .copy-right {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 100%;
+
+        p {
+            color: #95999b;
+            font-size: 18px;
+            font-weight:300;
+            a{ color:#e60555;}
+        }
+    }
+}
+
+.social {
+    overflow: hidden;
+    height: 100%;
+    width: auto;
+    display:  flex;
+    align-items: center;
+    justify-content:center;
+    order: 1;
+    margin-right: 15px;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: inline-block;
+
+            a {
+                text-decoration: none;
+
+                i {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    border: 2px solid $main-color;
+                    color: $main-color;
+                    @include transition(.25s);
+                }
+
+
+                &.youtube i {
+                    color: #CC181E;
+                    border: 2px solid #CC181E;
+                    @include transition(.25s);
+                }
+
+                &.linkedin i {
+                    color: #1686B0;
+                    border: 2px solid #1686B0;
+                    @include transition(.25s);
+                }
+
+                &.facebook i {
+                    color: #4E71A8;
+                    border: 2px solid #4E71A8;
+                    @include transition(.25s);
+                }
+
+                &.twitter i {
+                    color: #1CB7EB;
+                    border: 2px solid #1CB7EB;
+                    @include transition(.25s);
+                }
+
+                &.google-plus i {
+                    color: #E3411F;
+                    border: 2px solid #E3411F;
+                    @include transition(.25s);
+                }
+
+                &.pinterest i {
+                    color: #cb2027;
+                    border: 2px solid #cb2027;
+                    @include transition(.25s);
+                }
+
+                &.instagram i {
+                    color: #895A4D;
+                    border: 2px solid #895A4D;
+                    @include transition(.25s);
+                }
+
+                &.rss i {
+                    color: #fbc433;
+                    border: 2px solid #fbc433;
+                    @include transition(.25s);
+                }
+            }
+        }
+    }
+}
